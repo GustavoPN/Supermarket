@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Dtos\" />
+    <Folder Include="Settings\" />
+    <Folder Include="Reset\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SocialMiner.SupermarketProducts.Domain\SocialMiner.SupermarketProducts.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

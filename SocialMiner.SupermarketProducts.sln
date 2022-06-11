@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialMiner.SupermarketProducts.Rest", "SocialMiner.SupermarketProducts\SocialMiner.SupermarketProducts.Rest.csproj", "{11766790-60BD-43C5-8766-23D8CD7742FA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialMiner.SupermarketProducts.Core", "SocialMiner.SupermarketProducts.Core\SocialMiner.SupermarketProducts.Core.csproj", "{88335473-55BC-40BE-A232-ADFD53EB5932}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialMiner.SupermarketProducts.Domain", "SocialMiner.SupermarketProducts.Domain\SocialMiner.SupermarketProducts.Domain.csproj", "{3FA6C71A-077A-410F-9C60-0529119BC399}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialMiner.SupermarketProducts.Repositories", "SocialMiner.SupermarketProducts.Repositores\SocialMiner.SupermarketProducts.Repositories.csproj", "{96E49075-042E-49AF-B42B-6A82CA4F649B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialMiner.SupermarketProducts.UseCases", "SocialMiner.SupermarketProducts.UseCases\SocialMiner.SupermarketProducts.UseCases.csproj", "{E43E1913-A1BA-43BC-AEAF-43B0C5DA3634}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11766790-60BD-43C5-8766-23D8CD7742FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11766790-60BD-43C5-8766-23D8CD7742FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11766790-60BD-43C5-8766-23D8CD7742FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11766790-60BD-43C5-8766-23D8CD7742FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88335473-55BC-40BE-A232-ADFD53EB5932}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88335473-55BC-40BE-A232-ADFD53EB5932}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88335473-55BC-40BE-A232-ADFD53EB5932}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88335473-55BC-40BE-A232-ADFD53EB5932}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FA6C71A-077A-410F-9C60-0529119BC399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FA6C71A-077A-410F-9C60-0529119BC399}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FA6C71A-077A-410F-9C60-0529119BC399}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FA6C71A-077A-410F-9C60-0529119BC399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96E49075-042E-49AF-B42B-6A82CA4F649B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96E49075-042E-49AF-B42B-6A82CA4F649B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96E49075-042E-49AF-B42B-6A82CA4F649B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96E49075-042E-49AF-B42B-6A82CA4F649B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E43E1913-A1BA-43BC-AEAF-43B0C5DA3634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E43E1913-A1BA-43BC-AEAF-43B0C5DA3634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E43E1913-A1BA-43BC-AEAF-43B0C5DA3634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E43E1913-A1BA-43BC-AEAF-43B0C5DA3634}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61E398FA-1DAC-488E-8967-C89773EFAAC6}
+	EndGlobalSection
+EndGlobal
