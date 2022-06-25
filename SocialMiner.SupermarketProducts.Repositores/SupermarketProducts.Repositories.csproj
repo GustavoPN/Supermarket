@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SocialMiner.SupermarketProducts.Core\SocialMiner.SupermarketProducts.Core.csproj" />
-    <ProjectReference Include="..\SocialMiner.SupermarketProducts.Domain\SocialMiner.SupermarketProducts.Domain.csproj" />
+    <ProjectReference Include="..\SocialMiner.SupermarketProducts.Core\SupermarketProducts.Core.csproj" />
+    <ProjectReference Include="..\SocialMiner.SupermarketProducts.Domain\SupermarketProducts.Domain.csproj" />
   </ItemGroup>
 
 </Project>

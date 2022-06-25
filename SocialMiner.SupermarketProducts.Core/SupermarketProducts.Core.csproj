@@ -9,11 +9,15 @@
   <ItemGroup>
     <Folder Include="Dtos\" />
     <Folder Include="Settings\" />
-    <Folder Include="Reset\" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SocialMiner.SupermarketProducts.Domain\SocialMiner.SupermarketProducts.Domain.csproj" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SocialMiner.SupermarketProducts.Domain\SupermarketProducts.Domain.csproj" />
   </ItemGroup>
 
 </Project>

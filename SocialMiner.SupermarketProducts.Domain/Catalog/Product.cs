@@ -10,8 +10,10 @@ namespace SocialMiner.SupermarketProducts.Domain.Product
             Description = description;
             NutritionalInformation = nutritionalInformation;
             BarCode = barCode;
+            Id = Guid.NewGuid();
         }
 
+        public Guid Id { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }
         public string NutritionalInformation { get; private set; }

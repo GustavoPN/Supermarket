@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialMiner.SupermarketProducts.Rest", "SocialMiner.SupermarketProducts\SocialMiner.SupermarketProducts.Rest.csproj", "{11766790-60BD-43C5-8766-23D8CD7742FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SupermarketProducts.Rest", "SocialMiner.SupermarketProducts\SupermarketProducts.Rest.csproj", "{11766790-60BD-43C5-8766-23D8CD7742FA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialMiner.SupermarketProducts.Core", "SocialMiner.SupermarketProducts.Core\SocialMiner.SupermarketProducts.Core.csproj", "{88335473-55BC-40BE-A232-ADFD53EB5932}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SupermarketProducts.Core", "SocialMiner.SupermarketProducts.Core\SupermarketProducts.Core.csproj", "{88335473-55BC-40BE-A232-ADFD53EB5932}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialMiner.SupermarketProducts.Domain", "SocialMiner.SupermarketProducts.Domain\SocialMiner.SupermarketProducts.Domain.csproj", "{3FA6C71A-077A-410F-9C60-0529119BC399}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SupermarketProducts.Domain", "SocialMiner.SupermarketProducts.Domain\SupermarketProducts.Domain.csproj", "{3FA6C71A-077A-410F-9C60-0529119BC399}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialMiner.SupermarketProducts.Repositories", "SocialMiner.SupermarketProducts.Repositores\SocialMiner.SupermarketProducts.Repositories.csproj", "{96E49075-042E-49AF-B42B-6A82CA4F649B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SupermarketProducts.Repositories", "SocialMiner.SupermarketProducts.Repositores\SupermarketProducts.Repositories.csproj", "{96E49075-042E-49AF-B42B-6A82CA4F649B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialMiner.SupermarketProducts.UseCases", "SocialMiner.SupermarketProducts.UseCases\SocialMiner.SupermarketProducts.UseCases.csproj", "{E43E1913-A1BA-43BC-AEAF-43B0C5DA3634}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SupermarketProducts.UseCases", "SocialMiner.SupermarketProducts.UseCases\SupermarketProducts.UseCases.csproj", "{E43E1913-A1BA-43BC-AEAF-43B0C5DA3634}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
