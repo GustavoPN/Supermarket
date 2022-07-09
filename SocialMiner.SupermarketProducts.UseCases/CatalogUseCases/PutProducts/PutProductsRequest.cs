@@ -1,9 +1,10 @@
 ﻿using MediatR;
 using SupermarketProducts.Core.Rest;
+using SupermarketProducts.UseCases.CatalogUseCases.GetProductsUseCase;
 
-namespace SupermarketProducts.UseCases.CatalogUseCases.PostProducts
+namespace SupermarketProducts.UseCases.CatalogUseCases.PutProducts
 {
-    public class PostProductsRequest : IRequest<ApiResponse<PostProductsResponse>>
+    public class PutProductsRequest : IRequest<ApiResponse<PutProductsResponse>>
     {
         public string Name { get; set; }
         public string Description { get; set; }

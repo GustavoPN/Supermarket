@@ -3,31 +3,31 @@ using SocialMiner.SupermarketProducts.Core.Repository;
 using SocialMiner.SupermarketProducts.Domain.Product;
 using SupermarketProducts.Core.Rest;
 
-namespace SupermarketProducts.UseCases.CatalogUseCases.PostProducts
+namespace SupermarketProducts.UseCases.CatalogUseCases.PutProducts
 {
-    public class PostProductsUseCase : IRequestHandler<PostProductsRequest, ApiResponse<PostProductsResponse>>
+    public class PutProductsUseCase : IRequestHandler<PutProductsRequest, ApiResponse<PutProductsResponse>>
     {
         private IProductRepository _ProductRepository;
 
-        public PostProductsUseCase(IProductRepository _productsRepository)
+        public PutProductsUseCase(IProductRepository _productsRepository)
         {
             _ProductRepository = _ProductRepository;
         }
 
-        public async Task<ApiResponse<PostProductsResponse>> Handle
-                                                            (PostProductsRequest request, 
+        public async Task<ApiResponse<PutProductsResponse>> Handle
+                                                            (PutProductsRequest request,
                                                              CancellationToken cancellationToken)
         {
-            var p = new Product(request.Name, 
+            var p = new Product(request.Name,
                                 request.Description,
                                 request.NutritionalInformation,
                                 request.BarCode);
 
             await _ProductRepository.AddAsync(p);
 
-            return new ApiResponse<PostProductsResponse>
+            return new ApiResponse<PutProductsResponse>
             {
-                Response = new PostProductsResponse
+                Response = new PutProductsResponse
                 {
                     Id = p.Id
                 }

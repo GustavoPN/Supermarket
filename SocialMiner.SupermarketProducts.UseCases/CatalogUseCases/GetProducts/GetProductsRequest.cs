@@ -1,11 +1,11 @@
 ﻿using MediatR;
-using SupermarketProducts.Core.Reset;
+using SupermarketProducts.Core.Rest;
 
 namespace SupermarketProducts.UseCases.CatalogUseCases.GetProductsUseCase
 {
     public class GetProductsRequest : IRequest<ApiResponse<GetProductsResponse>>
     {
-        public string Tag { get; set; }
+        
     }
 
 }

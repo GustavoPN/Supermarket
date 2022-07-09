@@ -1,6 +1,6 @@
 ﻿using SocialMiner.SupermarketProducts.Domain.Core;
 
-namespace SupermarketProducts.Core.Reset
+namespace SupermarketProducts.Core.Rest
 {
     public class ApiResponse<T>
     {

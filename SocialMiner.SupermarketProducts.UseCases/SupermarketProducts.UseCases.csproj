@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="CatalogUseCases\PutProducts\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\SocialMiner.SupermarketProducts.Core\SupermarketProducts.Core.csproj" />
     <ProjectReference Include="..\SocialMiner.SupermarketProducts.Repositores\SupermarketProducts.Repositories.csproj" />
   </ItemGroup>

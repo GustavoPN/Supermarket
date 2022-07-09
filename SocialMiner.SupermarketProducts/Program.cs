@@ -1,4 +1,12 @@
+using MediatR;
+using SocialMiner.SupermarketProducts.Core.Repository;
+using SocialMiner.SupermarketProducts.Core.Settings;
+using SocialMiner.SupermarketProducts.Repositores;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var productsDb = new MongoDbSettings();
+builder.Configuration.GetSection("ProductsDb").Bind(productsDb);
 
 // Add services to the container.
 
@@ -6,6 +14,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<MongoDbSettings>(productsDb);
+builder.Services.AddTransient<IProductRepository, ProductRepository>();
+builder.Services.AddMediatR(typeof(GetProductsUseCase));
 
 var app = builder.Build();
 

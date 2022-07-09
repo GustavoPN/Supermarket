@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using SupermarketProducts.Core.Reset;
+using SupermarketProducts.Core.Rest;
 
 namespace SupermarketProducts.UseCases.CatalogUseCases.DeleteProducts
 {

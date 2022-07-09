@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using SocialMiner.SupermarketProducts.Core.Repository;
 using SocialMiner.SupermarketProducts.Repositores;
-using SupermarketProducts.Core.Reset;
+using SupermarketProducts.Core.Rest;
 
 namespace SupermarketProducts.UseCases.CatalogUseCases.GetProductsById
 {
@@ -9,7 +9,7 @@ namespace SupermarketProducts.UseCases.CatalogUseCases.GetProductsById
     {
         private readonly IProductRepository _productsRepository;
 
-        public GetProductsByIdUseCase(ProductRepository productsRepository)
+        public GetProductsByIdUseCase(IProductRepository productsRepository)
         {
             _productsRepository = productsRepository;
         }
