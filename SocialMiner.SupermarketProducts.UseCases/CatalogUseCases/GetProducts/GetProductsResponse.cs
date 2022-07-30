@@ -5,12 +5,12 @@ namespace SupermarketProducts.UseCases.CatalogUseCases.GetProductsUseCase
     public class GetProductsResponse
     {
        
-            public GetProductsResponse(IEnumerable<Product> list)
+            public GetProductsResponse(IEnumerable<Product> products)
             {
-                List = list;
+                Products = products;
             }
 
-            public IEnumerable<Product> List { get; set; }
+            public IEnumerable<Product> Products { get; set; }
         
     }
 }

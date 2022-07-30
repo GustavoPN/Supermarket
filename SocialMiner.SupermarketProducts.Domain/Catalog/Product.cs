@@ -13,7 +13,6 @@ namespace SocialMiner.SupermarketProducts.Domain.Product
             Id = Guid.NewGuid();
         }
 
-        public Guid Id { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }
         public string NutritionalInformation { get; private set; }

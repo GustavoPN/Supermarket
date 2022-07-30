@@ -1,4 +1,5 @@
-﻿using MongoDB.Driver;
+﻿using MongoDB.Bson.Serialization;
+using MongoDB.Driver;
 using SocialMiner.SupermarketProducts.Core.Repository;
 using SocialMiner.SupermarketProducts.Core.Settings;
 using SocialMiner.SupermarketProducts.Domain.Product;
@@ -9,20 +10,30 @@ namespace SocialMiner.SupermarketProducts.Repositores
     {
         private readonly MongoDbSettings _settings;
         private readonly IMongoCollection<Product> _collection;
+        private readonly IMongoClient _client;
        
         public ProductRepository(MongoDbSettings settings)
         {
             _settings = settings;
-            var database = new MongoClient(settings.ConnectionString).GetDatabase(settings.DatabaseName);
+            _client = new MongoClient(settings.ConnectionString);
+            var database = _client.GetDatabase(settings.DatabaseName);
             _collection = database.GetCollection<Product>("product");
+            if (!BsonClassMap.IsClassMapRegistered(typeof(Product)))
+                BsonClassMap.RegisterClassMap<Product>(cm =>
+                {
+                    cm.AutoMap();
+                    cm.UnmapMember(m => m.Errors);
+                });
         }
 
         public async Task AddAsync(Product document)
         {
-            await _collection
-                    .ReplaceOneAsync(x => x.Id == document.Id,
-                                       document,
-                                       new ReplaceOptions { IsUpsert = true });
+            using(var session = await _client.StartSessionAsync())
+            {
+                //session.StartTransaction();
+                await _collection.InsertOneAsync(document);
+               // await session.CommitTransactionAsync();
+            }
         }
 
         public async Task<bool> DeleteAsync(Guid id)

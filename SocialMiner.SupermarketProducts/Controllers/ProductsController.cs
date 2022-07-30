@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SocialMiner.SupermarketProducts.Core.Repository;
 using SocialMiner.SupermarketProducts.Repositores;
+using SupermarketProducts.UseCases.CatalogUseCases.GetProductsById;
 using SupermarketProducts.UseCases.CatalogUseCases.GetProductsUseCase;
+using SupermarketProducts.UseCases.CatalogUseCases.PostProducts;
 using SupermarketProducts.UseCases.CatalogUseCases.PutProducts;
 
 namespace SupermarketProducts.Rest.Controllers
@@ -20,11 +22,27 @@ namespace SupermarketProducts.Rest.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetProducts()
+        public async Task<IActionResult> GetProducts()
         {
             var request = new GetProductsRequest();
-            var response = _mediator.Send(request);
+            var response = await _mediator.Send(request);
             return Ok(response);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(Guid id)
+        {
+            var request = new GetProductsByIdRequest(id);
+            var response = await _mediator.Send(request);
+            return Ok(response);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PostProducts(PostProductsRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return Ok(response);
+
         }
     }
 }

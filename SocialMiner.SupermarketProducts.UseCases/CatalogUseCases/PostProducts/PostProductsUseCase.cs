@@ -11,7 +11,7 @@ namespace SupermarketProducts.UseCases.CatalogUseCases.PostProducts
 
         public PostProductsUseCase(IProductRepository _productsRepository)
         {
-            _ProductRepository = _ProductRepository;
+            _ProductRepository = _productsRepository;
         }
 
         public async Task<ApiResponse<PostProductsResponse>> Handle
