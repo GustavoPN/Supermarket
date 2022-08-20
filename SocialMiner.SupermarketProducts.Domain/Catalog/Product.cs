@@ -17,5 +17,25 @@ namespace SocialMiner.SupermarketProducts.Domain.Product
         public string Description { get; private set; }
         public string NutritionalInformation { get; private set; }
         public string BarCode { get; private set; }
+        public void SetNutritionalInformation(string value)
+        {
+            if(value != string.Empty && !string.IsNullOrWhiteSpace(value))
+                NutritionalInformation = value;
+        }
+        public void SetName(string value)
+        {
+            if (value != string.Empty && !string.IsNullOrWhiteSpace(value))
+                Name = value;
+        }
+        public void SetDescription(string value)
+        {
+            if (value != string.Empty && !string.IsNullOrWhiteSpace(value))
+                Description = value;
+        }
+        public void SetBarCode(string value)
+        {
+            if (value != string.Empty && !string.IsNullOrWhiteSpace(value))
+                BarCode = value;
+        }
     }
 }
