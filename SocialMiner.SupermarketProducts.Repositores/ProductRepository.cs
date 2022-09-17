@@ -50,7 +50,17 @@ namespace SocialMiner.SupermarketProducts.Repositores
 
         public async Task<Product> GetAsync(Guid id)
         {
-            return (await _collection.FindAsync<Product>(x => x.Id != id)).First();
+            return (await _collection.FindAsync<Product>(x => x.Id == id)).First();
+        }
+
+        public async Task UpdateAsync(Product document)
+        {
+            await _collection.ReplaceOneAsync<Product>(x => x.Id == document.Id,
+                                                       document,
+                                                       new ReplaceOptions  
+                                                       { 
+                                                           IsUpsert = true
+                                                       });
         }
     }
 }
