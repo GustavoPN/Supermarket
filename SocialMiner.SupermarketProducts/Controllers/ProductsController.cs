@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SocialMiner.SupermarketProducts.Core.Repository;
 using SocialMiner.SupermarketProducts.Repositores;
+using SupermarketProducts.UseCases.CatalogUseCases.DeleteProducts;
 using SupermarketProducts.UseCases.CatalogUseCases.GetProductsById;
 using SupermarketProducts.UseCases.CatalogUseCases.GetProductsUseCase;
 using SupermarketProducts.UseCases.CatalogUseCases.PostProducts;
@@ -43,6 +44,24 @@ namespace SupermarketProducts.Rest.Controllers
             var response = await _mediator.Send(request);
             return Ok(response);
 
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete(DeleteProductsRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return Ok(response);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> PutProducts(PutProductsRequest request)
+        {
+            if (request.id == Guid.Empty)
+            {
+                return BadRequest();
+            }
+            var response = await _mediator.Send(request);
+            return Ok(response);
         }
     }
 }

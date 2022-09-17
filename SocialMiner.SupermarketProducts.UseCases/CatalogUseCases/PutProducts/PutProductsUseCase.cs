@@ -11,27 +11,29 @@ namespace SupermarketProducts.UseCases.CatalogUseCases.PutProducts
 
         public PutProductsUseCase(IProductRepository _productsRepository)
         {
-            _ProductRepository = _ProductRepository;
+            _ProductRepository = _productsRepository;
         }
 
         public async Task<ApiResponse<PutProductsResponse>> Handle
                                                             (PutProductsRequest request,
                                                              CancellationToken cancellationToken)
         {
-            var p = new Product(request.Name,
-                                request.Description,
-                                request.NutritionalInformation,
-                                request.BarCode);
+            var product = await _ProductRepository.GetAsync(request.id);
 
-            await _ProductRepository.AddAsync(p);
+            product.SetNutritionalInformation(request.NutritionalInformation);
+            product.SetDescription(request.Description);
+            product.SetBarCode(request.BarCode);
+            product.SetName(request.Name);
+
+            await _ProductRepository.UpdateAsync(product);
 
             return new ApiResponse<PutProductsResponse>
             {
                 Response = new PutProductsResponse
                 {
-                    Id = p.Id
+                    Id = product.Id
                 }
             };
         }
     }
-}
+}  
