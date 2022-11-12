@@ -8,6 +8,6 @@ namespace SocialMiner.SupermarketProducts.Core.Repository
         Task<IEnumerable<Product>> GetAsync();
         Task<Product> GetAsync(Guid id);
         Task<bool> DeleteAsync(Guid id);
-        Task UpdateAsync(object p);
+        Task UpdateAsync(Product document);
     }
 }
