@@ -41,6 +41,11 @@ namespace SupermarketProducts.Rest.Controllers
         [HttpPost]
         public async Task<IActionResult> PostProducts(PostProductsRequest request)
         {
+            if (string.IsNullOrEmpty(request.Name) ||
+                string.IsNullOrEmpty(request.Description) ||
+                string.IsNullOrEmpty(request.BarCode))
+                return BadRequest(request);
+
             var response = await _mediator.Send(request);
             return Ok(response);
 
@@ -49,6 +54,9 @@ namespace SupermarketProducts.Rest.Controllers
         [HttpDelete]
         public async Task<IActionResult> Delete(DeleteProductsRequest request)
         {
+            if (request.Id == Guid.Empty)
+                return BadRequest(request);
+
             var response = await _mediator.Send(request);
             return Ok(response);
         }
@@ -56,10 +64,14 @@ namespace SupermarketProducts.Rest.Controllers
         [HttpPut]
         public async Task<IActionResult> PutProducts(PutProductsRequest request)
         {
-            if (request.id == Guid.Empty)
+            if (request.id == Guid.Empty|| 
+                string.IsNullOrEmpty(request.Name) ||
+                string.IsNullOrEmpty(request.Description) ||
+                string.IsNullOrEmpty(request.BarCode))
             {
-                return BadRequest();
+                return BadRequest(request);
             }
+
             var response = await _mediator.Send(request);
             return Ok(response);
         }
